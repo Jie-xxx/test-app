@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英文單字背誦工具</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#3b82f6">
+</head>
+
+<body>
+  <div class="card">
+    <div class="tag">Vocabulary</div>
+
+    <h1 id="word">Word</h1>
+
+    <p id="meaning" class="meaning hidden"></p>
+
+
+    <div class="actions">
+      <button class="btn" onclick="toggleMeaning()">顯示中文</button>
+      <button class="btn" onclick="speak('word')">🔊 單字</button>
+      <button class="btn" onclick="speak('sentence')">🔊 例句</button>
+      <button class="btn outline" onclick="nextWord()">下一題</button>
+    </div>
+
+    <div class="sentence-box">
+      <p id="sentence"></p>
+      <p id="sentenceZh" class="sentence-zh hidden"></p>
+    </div>
+
+    <button class="btn small" onclick="toggleSentence()">顯示例句翻譯</button>
+  </div>
+
+  <!-- JavaScript（一定要放在 body 最下面） -->
+  <script src="words.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+</body>
+</html>
