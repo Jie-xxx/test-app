@@ -1,0 +1,146 @@
+body {
+  font-family: "Inter", "Noto Sans TC", sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #f9fbfd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 卡片 */
+.card {
+  background: #ffffff;
+  width: 420px;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* 標籤 */
+.tag {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #3b82f6;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+/* 單字 */
+#word {
+  font-size: 42px;
+  letter-spacing: 1px;
+  margin: 16px 0;
+}
+
+/* 中文 */
+.meaning {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* 例句區 */
+.sentence-box {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.sentence-zh {
+  color: #666;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* 按鈕 */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(59,130,246,0.3);
+}
+
+.btn.outline {
+  background: white;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+}
+
+.btn.small {
+  margin-top: 12px;
+  width: 100%;
+}
+
+/* 動畫 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* 📱 Mobile RWD */
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+    height: auto;
+  }
+
+  .card {
+    width: 100%;
+    padding: 24px;
+    border-radius: 14px;
+  }
+
+  #word {
+    font-size: 32px;
+  }
+
+  .meaning {
+    font-size: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .sentence-box {
+    font-size: 15px;
+  }
+}
+
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
